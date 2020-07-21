@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Mccm Automation Regression Suite">
+  <test name="Pega DSS Regression Test">
+    <classes>
+      <class name="Mccm.PegaTest.LoginPageTest"/> 
+      <class name="Mccm.PegaTest.HomePageTest"/>    
+    </classes>
+  </test> <!-- Test -->
+  
+  <test name="Pega Marketing Regression Test">
+    <classes>
+      <class name="Mccm.PegaTest.PegamarktingTest"/>  
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

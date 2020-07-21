@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Mccm Regression Suite]">
+  <test thread-count="5" name="Pega DSS Regression Test(failed)">
+    <classes>
+      <class name="Mccm.PegaTest.LoginPageTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="VerifyLoginPageTitleTest"/>
+          <include name="VerifyPegaLogoTest"/>
+          <include name="setup"/>
+          <include name="VerifyLoginSuccessfulTest"/>
+        </methods>
+      </class> <!-- Mccm.PegaTest.LoginPageTest -->
+      <class name="Mccm.PegaTest.HomePageTest">
+        <methods>
+          <include name="VerifyDynamicSystemSettingssuccessfully"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- Mccm.PegaTest.HomePageTest -->
+    </classes>
+  </test> <!-- Pega DSS Regression Test(failed) -->
+  <test thread-count="5" name="Pega Marketing Regression Test(failed)">
+    <classes>
+      <class name="Mccm.PegaTest.PegamarktingTest">
+        <methods>
+          <include name="VerifyNBACampaignRunSuccessfully"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- Mccm.PegaTest.PegamarktingTest -->
+    </classes>
+  </test> <!-- Pega Marketing Regression Test(failed) -->
+</suite> <!-- Failed suite [Mccm Regression Suite] -->
