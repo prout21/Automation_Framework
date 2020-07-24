@@ -1,9 +1,11 @@
-package com.mccm.automation;
+package com.mycompany.app;
 
 import com.jcraft.jsch.ChannelSftp;
 import com.jcraft.jsch.ChannelSftp.*;
 import com.jcraft.jsch.ChannelSftp.LsEntry;
 import com.mccm.automation.XLSXReadWrite;
+import com.mccm.automation.ZippingFiles;
+import com.mccm.automation.ZippingFiles_Cassandra;
 import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.Session;
 import com.jcraft.jsch.SftpException;
@@ -29,7 +31,14 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import java.util.Properties;
 import java.util.Vector;
 import org.testng.annotations.Test;
+
+import com.mccm.automation.DBCheck_Mccm;
+import com.mccm.automation.FilesAvailabilityCheck_Cassandra;
+import com.mccm.automation.MyAutomationConstants;
+import com.mccm.automation.ScriptsExecution;
+import com.mccm.automation.ScriptsExecution_Cassandra;
 import com.mccm.automation.Upload;
+import com.mccm.automation.Upload_Cassandra;
 
 
 
@@ -302,8 +311,7 @@ public class App extends MyAutomationConstants {
 		 
 	        Upload_Cassandra.main(null);
 		  System.out.println("Case 2:"); 
-		///pr  FilesAvailabilityCheck_Cassandra.main(null);
-		  FileExistChk_Inbound_KIASEPOS.main(null);
+		  FilesAvailabilityCheck_Cassandra.main(null);
 		 
 			
 			  System.out.println(""); System.out.println("Case 3:"); //

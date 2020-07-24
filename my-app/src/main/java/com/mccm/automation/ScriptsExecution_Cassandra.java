@@ -7,13 +7,16 @@ import com.jcraft.jsch.ChannelExec;
 import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.Session;
 
-public class ScriptsExecution_Cassandra {
+public class ScriptsExecution_Cassandra extends App {
 
 	// static String filepath = "/opt/SP/mccm/SYSN/mccm_dataload/import/scripts";
 
 	/**
 	 	 */
-	public static void main(String[] args) {
+	// public static void main(String[] args) {  
+	
+		public static void main(Object args) {
+		
 	    String host="localhost";
 	    String user="mccm02";
 	    String password="unix11";

@@ -7,9 +7,9 @@
 	</listeners>
 	
 	
-  <test name="MCCM E2E  Test">
+  <test name="File check and Data Load Test">
     <classes>
-      <class name="com.mccm.automation.App"/>
-    </classes>
+      <class name="com.mccm.automation.App"/> 
+      </classes>
    </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -1,6 +1,8 @@
 package com.mccm.automation;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 import com.jcraft.jsch.Channel;
 import com.jcraft.jsch.ChannelExec;
@@ -35,12 +37,11 @@ import org.apache.commons.io.IOUtils;
 
 public class DBCheck_CassandraTEST extends App {
 
-
 	/**
 	 	 */
 @Test	
 	public static void main(Object args)
-//public  void main() 
+ //public  void main() 
 
 	{
 	    String host="localhost";
@@ -87,11 +88,12 @@ public class DBCheck_CassandraTEST extends App {
 	        
 	        InputStream in=channel.getInputStream();
 	        channel.connect();
-	        
-	       String contents = new String(in.readAllBytes(), StandardCharsets.UTF_8);
+	        Thread.sleep(10000);
+	        String contents = new String(in.readAllBytes(), StandardCharsets.UTF_8);
+	     //   String contents = new String(Files.readAllBytes((Path) in), StandardCharsets.UTF_8);
 	     //    String contents = new String(null, in.read(), 0;
-	         
-	         //System.out.println(contents);
+	        Thread.sleep(10000);
+	        System.out.println(contents);
 
 	        byte[] tmp=new byte[1024];
 	        while(true){
@@ -132,6 +134,7 @@ public class DBCheck_CassandraTEST extends App {
 	        channel.disconnect();
 	        session.disconnect();
 	        System.out.println("DONE");
+	        
 	    }catch(Exception e){
 	    	e.printStackTrace();
 	    }

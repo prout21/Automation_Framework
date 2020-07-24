@@ -41,7 +41,7 @@ import com.mccm.automation.Upload;
 
 @Test
 
-public class App extends MyAutomationConstants {
+public class App_Inbound_KIASEPOS extends MyAutomationConstants {
 //public class App {
 
 //	@Test
@@ -59,7 +59,7 @@ public class App extends MyAutomationConstants {
   //  public static void main( String[] args )
 //	 {
 	
-	      public void VerifyDataLoadSuccessfully() throws InterruptedException, AWTException, SftpException {
+	      public void VerifyKIASEPOSFileLoadSuccessfully() throws InterruptedException, AWTException, SftpException {
 		//   public void main() throws InterruptedException, AWTException, SftpException {
 	//		public static void main() throws InterruptedException, AWTException {
 	
@@ -117,7 +117,7 @@ public class App extends MyAutomationConstants {
         String name11= " ";
         int k;
         //String host1 = "46.190.224.85";
-        Upload.main(null);//main();
+        Upload_Inbound_KIASEPOS.main(null);//main();
         JSch jSch = new JSch();
         Session session = jSch.getSession(user,host,9022);
         //Session session = jSch.getSession(user1,host1,22);
@@ -133,14 +133,14 @@ public class App extends MyAutomationConstants {
         System.out.println("Session connected: "+session.isConnected());
         System.out.println("");            
 
-        Vector fileList = channelSftp.ls("/opt/SP/data/mccm02/logs/temp/temp/cassandra");
+        Vector fileList = channelSftp.ls("/opt/SP/mccm/SYSN/input/KIASEPOS");
         
 //        for (int i = 0; i < fileList.size(); i++) {
 //            ChannelSftp.LsEntry lsEntry = (ChannelSftp.LsEntry) fileList.get(i);
 //            System.out.println(lsEntry.getFilename());
             
         //fileList = channelSftp.ls("/opt/SP/mccm/SYSN/mccm_dataload/import/input");
-        fileList = channelSftp.ls("/opt/SP/data/mccm02/logs/temp/cassandra");
+        fileList = channelSftp.ls("/opt/SP/mccm/SYSN/input/KIASEPOS");
           //  Vector fileList = channelSftp.ls("/opt/SP/data/mccm02/logs/temp/cassandra");
           
         	//Vector fileList = channelSftp.ls("/opt/SP/data/pegat02");
@@ -150,7 +150,7 @@ public class App extends MyAutomationConstants {
                ChannelSftp.LsEntry lsEntry = (ChannelSftp.LsEntry) fileList.get(i);
                System.out.println(lsEntry.getFilename()); 
            		}              
-           String[] name = {"ADDRESSBAN", "BUILDING", "CALENDAR", "CLINTVIEWEXPORTREVENUEEST", "CLINTVIEWEXPORTREVENUE", "CLINTVIEWREFOPTPRODUCT", "CLINTVIEWVWOPTRUN", "CONTACTLIST", "CONTACTOFFER", "CONTACTSTATUS", "CONTRACT", "CUSTOMER", "CUSTREL", "FLAGS", "GEOFOOTPRINT", "HOUSEHOLD", "LEGPPRCRATE", "LEGPRODUCT", "LEGSOCDISCOUNT", "LEGVOTYPE", "MEMOTYPE", "PERMISSIONS", "PRODUCT", "REPORTINGSERVICEPRODUCT", "SALESCHANNEL", "SALESORGANIZATION", "SCHIERARCHY", "SCORES", "SUBSCRIPTION", "TOHIERARCHY"};
+           String[] name = {"DWH.3MMC.SUBSCRIBER_TIP_HIS"};
            
            for (int i = 0; i < name.length; i++) 
            {
@@ -287,35 +287,35 @@ public class App extends MyAutomationConstants {
 	
 	  System.out.println(""); 
 	  //System.out.println("Case 1:");
-	  ZippingFiles.main(args); 
+	//pr  ZippingFiles.main(args); 
 		
 		
 		  System.out.println(""); 
 		 // System.out.println("Case 2:");
 		  System.out.println("");
 		 // FilesAvailabilityCheck.main(args);
-		  System.out.println("Case 3:"); 
-		  ScriptsExecution.main(args); // // Cassandra
+     	  System.out.println("Case 3:"); 
+	//pr	  ScriptsExecution.main(args); // // Cassandra
 		  //load start System.out.println(""); System.out.println("Case 4-5-6:");
-		  DBCheck_Mccm.main(args); // ////////////////////////////
-		  System.out.println("Cassandra load start"); System.out.println("");
+	//pr	  DBCheck_Mccm.main(args); // ////////////////////////////
+	//pr	  System.out.println("Cassandra load start"); System.out.println("");
 		 
-	        Upload_Cassandra.main(null);
-		  System.out.println("Case 2:"); 
+	    //pr    Upload_Cassandra.main(null);
+		   System.out.println("Case 2:"); 
 		///pr  FilesAvailabilityCheck_Cassandra.main(null);
 		  FileExistChk_Inbound_KIASEPOS.main(null);
 		 
 			
-			  System.out.println(""); System.out.println("Case 3:"); //
+     		  System.out.println(""); System.out.println("Case 3:"); //
 			  
-			  ZippingFiles_Cassandra.main(args); 
+		//pr	  ZippingFiles_Cassandra.main(args); 
 			  System.out.println(""); //
 			//  System.out.println("Case 3:"); 
 			  //ZippingFiles_Cassandra.main(args);
 			  System.out.println(""); //// System.out.println("Case 4:");
 		//	  DBCheck_Cassandra.main(args); //// //  prafulla commeted
 			  
-			  ScriptsExecution_Cassandra.main(args); //// //
+		//pr	  ScriptsExecution_Cassandra.main(args); //// //
 			 			
 	 //  PegaAppEndToEndFlow.RunNBACampaignEndToEndFlow();
 			 
@@ -338,7 +338,7 @@ public class App extends MyAutomationConstants {
          * http://checkerframework.org
          */
     	 
-        System.out.println("... Done");
+        System.out.println("Done...");
     }
 
 	//*******************************************************************************************
