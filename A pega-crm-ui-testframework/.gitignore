@@ -1,0 +1,5 @@
+/target/
+/.gradle/
+/latestreports/
+/logs/
+/log.txt
