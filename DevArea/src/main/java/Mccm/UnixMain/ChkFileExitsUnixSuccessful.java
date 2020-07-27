@@ -1,4 +1,4 @@
-package Mccm.UnixTest;
+package Mccm.UnixMain;
 
 import java.util.Properties;
 import java.util.Vector;
@@ -9,7 +9,7 @@ import com.jcraft.jsch.ChannelSftp.LsEntry;
 import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.Session;
-public class ChkFileExitsUnix     {
+public class ChkFileExitsUnixSuccessful     {
 
 	 @Test
     public void Filechkunix() throws Exception
@@ -19,14 +19,12 @@ public class ChkFileExitsUnix     {
 		Session session = null;
 		Channel channel = null;
 		ChannelSftp  sftp = null;
-		//  ChannelSftp channelSftp = (ChannelSftp) session.openChannel("sftp");
 		
 		String privateKeyPath = "C:\\Users\\prout21\\putty\\PuTTY\\converted.ppk";
        try {
 		
 		jsch.addIdentity(privateKeyPath);
-		session = jsch.getSession("dxc_dev", "3.120.110.152",18881);
-		//session = jsch.getSession("dxc_dev", "46.190.224.85",18881);
+		session = jsch.getSession("mccm02", "10-0-4-99",22);
 		Properties config = new Properties();
 		config.put("StrictHostKeyChecking", "no");
 		session.setConfig(config);
@@ -41,8 +39,7 @@ public class ChkFileExitsUnix     {
 		sftp = (ChannelSftp) channel;
 		System.out.println("Check1 successful");
 		
-       Vector<LsEntry>  files = sftp.ls("/home/dxc_dev");
-		// Vector fileList = channelSftp.ls("/opt/SP/mccm/SYSN/mccm_dataload/import/input");
+        Vector<LsEntry>  files = sftp.ls("/home/dxc_dev");
 		
 	   System.out.println("Check2 successful");
        System.out.println(files.get(0));
