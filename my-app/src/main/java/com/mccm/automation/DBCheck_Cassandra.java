@@ -30,6 +30,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
+import org.apache.commons.io.IOUtils;
+
 public class DBCheck_Cassandra extends App {
 
 

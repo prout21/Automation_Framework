@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.mccm.automation.FilesAvailabilityCheckInbound">
+      <class name="com.mycompany.app.App_Inbound_KIASEPOS">
         <methods>
-          <include name="main"/>
+          <include name="VerifyKIASEPOSFileLoadSuccessfully"/>
         </methods>
-      </class> <!-- com.mccm.automation.FilesAvailabilityCheckInbound -->
+      </class> <!-- com.mycompany.app.App_Inbound_KIASEPOS -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

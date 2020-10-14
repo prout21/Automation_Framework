@@ -1,9 +1,9 @@
-package com.mccm.automation;
+package Mccm.Unix.Inbound.DMP;
 
 import com.jcraft.jsch.ChannelSftp;
 import com.jcraft.jsch.ChannelSftp.*;
 import com.jcraft.jsch.ChannelSftp.LsEntry;
-import com.mccm.automation.XLSXReadWrite;
+import Mccm.Unix.Inbound.*;
 import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.Session;
 import com.jcraft.jsch.SftpException;
@@ -29,7 +29,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import java.util.Properties;
 import java.util.Vector;
 import org.testng.annotations.Test;
-import com.mccm.automation.Upload;
+//import com.mccm.automation.Upload;
 
 
 
@@ -41,7 +41,7 @@ import com.mccm.automation.Upload;
 
 @Test
 
-public class App_Inbound_KIASEPOS extends MyAutomationConstants {
+public class App_Inbound_DMP_Test extends MyAutomationConstants {
 //public class App {
 
 //	@Test
@@ -59,7 +59,7 @@ public class App_Inbound_KIASEPOS extends MyAutomationConstants {
   //  public static void main( String[] args )
 //	 {
 	
-	      public void VerifyKIASEPOSFileLoadSuccessfully() throws InterruptedException, AWTException, SftpException {
+	      public void VerifyDMPFileLoadSuccessfully() throws InterruptedException, AWTException, SftpException {
 		//   public void main() throws InterruptedException, AWTException, SftpException {
 	//		public static void main() throws InterruptedException, AWTException {
 	
@@ -118,7 +118,7 @@ public class App_Inbound_KIASEPOS extends MyAutomationConstants {
         int k;
          
         //String host1 = "46.190.224.85";
-        Upload_Inbound_KIASEPOS.main(null);//main();
+        Upload_Inbound_DMP.main(null);//main();
   
         JSch jSch = new JSch();
         Session session = jSch.getSession(user,host,9022);
@@ -135,14 +135,14 @@ public class App_Inbound_KIASEPOS extends MyAutomationConstants {
         System.out.println("Session connected: "+session.isConnected());
         System.out.println("");            
 
-        Vector fileList = channelSftp.ls("/opt/SP/mccm/SYSN/input/KIASEPOS");
+        Vector fileList = channelSftp.ls("/opt/SP/mccm/SYSN/input/DMP");
         
 //        for (int i = 0; i < fileList.size(); i++) {
 //            ChannelSftp.LsEntry lsEntry = (ChannelSftp.LsEntry) fileList.get(i);
 //            System.out.println(lsEntry.getFilename());
             
         //fileList = channelSftp.ls("/opt/SP/mccm/SYSN/mccm_dataload/import/input");
-        fileList = channelSftp.ls("/opt/SP/mccm/SYSN/input/KIASEPOS");
+        fileList = channelSftp.ls("/opt/SP/mccm/SYSN/input/DMP");
           //  Vector fileList = channelSftp.ls("/opt/SP/data/mccm02/logs/temp/cassandra");
           
         	//Vector fileList = channelSftp.ls("/opt/SP/data/pegat02");
@@ -152,7 +152,7 @@ public class App_Inbound_KIASEPOS extends MyAutomationConstants {
                ChannelSftp.LsEntry lsEntry = (ChannelSftp.LsEntry) fileList.get(i);
                System.out.println(lsEntry.getFilename()); 
            		}              
-           String[] name = {"DWH.3MMC.SUBSCRIBER_TIP_HIS"};
+           String[] name = {"TESTCYCL_1669_TC001_Validate_DMP_Response_IP_Correct-3"};
            
            for (int i = 0; i < name.length; i++) 
            {
@@ -305,7 +305,7 @@ public class App_Inbound_KIASEPOS extends MyAutomationConstants {
 	    //pr    Upload_Cassandra.main(null);
 		   System.out.println("Case 2:"); 
 		///pr  FilesAvailabilityCheck_Cassandra.main(null);
-		  FileExistChk_Inbound_KIASEPOS.main(null);
+		  FileExistChk_Inbound_DMP.main(null);
 		 
 			
      		  System.out.println(""); System.out.println("Case 3:"); //

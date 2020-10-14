@@ -1,4 +1,4 @@
-	package com.mccm.automation;
+	package Mccm.Unix.Inbound.DMP;
 
 	import com.jcraft.jsch.ChannelSftp;
 	import com.jcraft.jsch.ChannelSftp.LsEntry;
@@ -21,7 +21,7 @@ import org.testng.annotations.Test;
 
 import com.jcraft.jsch.SftpProgressMonitor;
 	
-	public class Upload_Inbound_KIASEPOS extends App_Inbound_KIASEPOS
+	public class Upload_Inbound_DMP extends App_Inbound_DMP_Test
  {
 	//public class Upload extends App
 //	public static String PROJECT_FOLDER_PATH1;
@@ -65,7 +65,7 @@ import com.jcraft.jsch.SftpProgressMonitor;
 	      // File f = new File("ADDRESSBAN_20200515010201.csv");
 	      //  channelSftp.put(new FileInputStream(f), f.getName());
 	      //  Vector fileList = channelSftp.ls("/opt/SP/data/mccm02/logs///");
-	        Vector fileList = channelSftp.ls("/opt/SP/mccm/SYSN/input/KIASEPOS");
+	        Vector fileList = channelSftp.ls("/opt/SP/mccm/SYSN/input/DMP");
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////
 	        
 	       	System.out.println("The available files are : ");
@@ -76,7 +76,7 @@ import com.jcraft.jsch.SftpProgressMonitor;
 //	           		}
 	           //String curDir=("C:\\oracle\\");
 	             File f = null;
-	           File curDir = new File("C:\\NBA_Inbound\\KIASEPOS");  
+	           File curDir = new File("C:\\NBA_Inbound\\DMP");  
 	           File[] filesList1 = curDir.listFiles();
 	           for(File f1 : filesList1){
 //	               if(f.isDirectory())
@@ -87,7 +87,7 @@ import com.jcraft.jsch.SftpProgressMonitor;
 	               }
 	           }   
 	        //   String[] name = {"custdata1", "BUILDING", "CALENDAR", "CLINTVIEWEXPORTREVENUEEST", "CLINTVIEWEXPORTREVENUE", "CLINTVIEWREFOPTPRODUCT", "CLINTVIEWVWOPTRUN", "CONTACTLIST", "CONTACTOFFER", "CONTACTSTATUS", "CONTRACT", "CUSTOMER", "CUSTREL", "FLAGS", "GEOFOOTPRINT", "HOUSEHOLD", "LEGPPRCRATE", "LEGPRODUCT", "LEGSOCDISCOUNT", "LEGVOTYPE", "MEMOTYPE", "PERMISSIONS", "PRODUCT", "REPORTINGSERVICEPRODUCT", "SALESCHANNEL", "SALESORGANIZATION", "SCHIERARCHY", "SCORES", "SUBSCRIPTION", "TOHIERARCHY"};
-		     String[] name = {"DWH.3MMC.SUBSCRIBER_TIP_HIS"};
+		     String[] name = {"TESTCYCL_1669_TC001_Validate_DMP_Response_IP_Correct-3"};
 	           
 	    //      String[] name = {"BUILDING"};//, "BUILDING", "CALENDAR", "CLINTVIEWEXPORTREVENUEEST", "CLINTVIEWEXPORTREVENUE", "CLINTVIEWREFOPTPRODUCT", "CLINTVIEWVWOPTRUN", "CONTACTLIST", "CONTACTOFFER", "CONTACTSTATUS", "CONTRACT", "CUSTOMER", "CUSTREL", "FLAGS", "GEOFOOTPRINT", "HOUSEHOLD", "LEGPPRCRATE", "LEGPRODUCT", "LEGSOCDISCOUNT", "LEGVOTYPE", "MEMOTYPE", "PERMISSIONS", "PRODUCT", "REPORTINGSERVICEPRODUCT", "SALESCHANNEL", "SALESORGANIZATION", "SCHIERARCHY", "SCORES", "SUBSCRIPTION", "TOHIERARCHY"};
 	           
@@ -96,7 +96,7 @@ import com.jcraft.jsch.SftpProgressMonitor;
 	           {
 	        	   boolean  filefound = false;
 	            int k;
-		           File curDir2 = new File("C:\\NBA_Inbound\\KIASEPOS");
+		           File curDir2 = new File("C:\\NBA_Inbound\\DMP");
 		           File[] filesList2 = curDir2.listFiles();
 		           //File f2 = new File(".");
 //	            String filename1 = "";
@@ -117,9 +117,9 @@ import com.jcraft.jsch.SftpProgressMonitor;
 	                	// channelSftp.put("C:\\oracle\\cusdata1.csv", "/opt/SP/data/mccm02/logs/temp/cassandra/");
 	                	 //channelSftp.put(filesList2[j].getPath(), "/opt/SP/data/mccm02/logs/temp/cassandra/"+f2.getName());
 	                	// channelSftp.put(f2.getPath(), "/opt/SP/data/mccm02/logs/temp/cassandra/"+f2.getName(),new progressMonitor());
-	                	 channelSftp.put(f2.getPath(), "/opt/SP/mccm/SYSN/input/KIASEPOS/"+f2.getName(),new progressMonitor());
+	                	 channelSftp.put(f2.getPath(), "/opt/SP/mccm/SYSN/input/DMP/"+f2.getName(),new progressMonitor());
 	                	 
-	                	 System.out.println("The file [" + k +"]:" + name[i] + " UPLOAD done to the  KIASEPOS input folder");
+	                	 System.out.println("The file [" + k +"]:" + name[i] + " UPLOAD done to the  DMP input folder");
 	                	 Thread.sleep(2000);
 	                	 
 	                	}
