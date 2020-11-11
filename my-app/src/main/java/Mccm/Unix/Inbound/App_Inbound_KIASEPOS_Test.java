@@ -1,4 +1,4 @@
-package com.mycompany.app;
+package Mccm.Unix.Inbound;
 
 import com.jcraft.jsch.ChannelSftp;
 import com.jcraft.jsch.ChannelSftp.*;
@@ -29,11 +29,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import java.util.Properties;
 import java.util.Vector;
 import org.testng.annotations.Test;
-
-import com.mccm.automation.FileExistChk_Inbound_KIASEPOS;
-import com.mccm.automation.MyAutomationConstants;
-import com.mccm.automation.Upload;
-import com.mccm.automation.Upload_Inbound_KIASEPOS;
+//import com.mccm.automation.Upload;
 
 
 
@@ -45,7 +41,7 @@ import com.mccm.automation.Upload_Inbound_KIASEPOS;
 
 @Test
 
-public class App_Inbound_KIASEPOS extends MyAutomationConstants {
+public class App_Inbound_KIASEPOS_Test extends MyAutomationConstants {
 //public class App {
 
 //	@Test
@@ -120,8 +116,10 @@ public class App_Inbound_KIASEPOS extends MyAutomationConstants {
         boolean filefound = false;
         String name11= " ";
         int k;
+         
         //String host1 = "46.190.224.85";
         Upload_Inbound_KIASEPOS.main(null);//main();
+  
         JSch jSch = new JSch();
         Session session = jSch.getSession(user,host,9022);
         //Session session = jSch.getSession(user1,host1,22);
