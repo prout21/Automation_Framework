@@ -105,6 +105,7 @@ public class PegaCampaign extends PegaRuleInstance implements Campaign {
 				break;
 			}
 			refreshRunStatus();
+			
 			pegaDriver.handleWaits().sleep(20);
 		}
 		return status;
