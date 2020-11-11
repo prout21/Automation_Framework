@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Pega DSS Regression suite]">
+  <test thread-count="5" name="Login Test(failed)">
+    <classes>
+      <class name="Mccm.PegaTest.LoginPageTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="VerifyLoginPageTitleTest"/>
+          <include name="VerifyPegaLogoTest"/>
+          <include name="setup"/>
+          <include name="VerifyLoginSuccessfulTest"/>
+        </methods>
+      </class> <!-- Mccm.PegaTest.LoginPageTest -->
+    </classes>
+  </test> <!-- Login Test(failed) -->
+  <test thread-count="5" name="Home Test(failed)">
+    <classes>
+      <class name="Mccm.PegaTest.HomePageTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="setup"/>
+          <include name="VerifySelectDevsduioTest"/>
+        </methods>
+      </class> <!-- Mccm.PegaTest.HomePageTest -->
+    </classes>
+  </test> <!-- Home Test(failed) -->
+</suite> <!-- Failed suite [Pega DSS Regression suite] -->

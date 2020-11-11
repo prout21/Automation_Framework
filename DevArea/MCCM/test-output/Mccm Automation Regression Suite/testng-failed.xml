@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Mccm Automation Regression Suite]">
+  <test thread-count="5" name="Pega Marketing Regression Test(failed)">
+    <classes>
+      <class name="Mccm.PegaTest.PegamarktingTest">
+        <methods>
+          <include name="VerifyNBACampaignRunSuccessfully"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- Mccm.PegaTest.PegamarktingTest -->
+    </classes>
+  </test> <!-- Pega Marketing Regression Test(failed) -->
+</suite> <!-- Failed suite [Mccm Automation Regression Suite] -->

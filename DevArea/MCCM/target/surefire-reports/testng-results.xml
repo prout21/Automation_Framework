@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Mccm Automation Regression Suite" duration-ms="33878" started-at="2020-06-09T15:05:08 IST" finished-at="2020-06-09T15:05:42 IST">
+    <groups>
+    </groups>
+    <test name="Pega DSS Regression Test" duration-ms="33878" started-at="2020-06-09T15:05:08 IST" finished-at="2020-06-09T15:05:42 IST">
+      <class name="Mccm.PegaTest.LoginPageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.PegaTest.LoginPageTest@4883b407]" name="setup" is-config="true" duration-ms="7490" started-at="2020-06-09T15:05:08 IST" finished-at="2020-06-09T15:05:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="VerifyLoginPageTitleTest()[pri:1, instance:Mccm.PegaTest.LoginPageTest@4883b407]" name="VerifyLoginPageTitleTest" duration-ms="13" started-at="2020-06-09T15:05:15 IST" finished-at="2020-06-09T15:05:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyLoginPageTitleTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.PegaTest.LoginPageTest@4883b407]" name="teardown" is-config="true" duration-ms="1015" started-at="2020-06-09T15:05:15 IST" finished-at="2020-06-09T15:05:16 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.PegaTest.LoginPageTest@4883b407]" name="setup" is-config="true" duration-ms="5710" started-at="2020-06-09T15:05:16 IST" finished-at="2020-06-09T15:05:22 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="VerifyPegaLogoTest()[pri:2, instance:Mccm.PegaTest.LoginPageTest@4883b407]" name="VerifyPegaLogoTest" duration-ms="140" started-at="2020-06-09T15:05:22 IST" finished-at="2020-06-09T15:05:22 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyPegaLogoTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.PegaTest.LoginPageTest@4883b407]" name="teardown" is-config="true" duration-ms="1132" started-at="2020-06-09T15:05:22 IST" finished-at="2020-06-09T15:05:23 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.PegaTest.LoginPageTest@4883b407]" name="setup" is-config="true" duration-ms="5509" started-at="2020-06-09T15:05:23 IST" finished-at="2020-06-09T15:05:29 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="VerifyLoginSuccessfulTest()[pri:3, instance:Mccm.PegaTest.LoginPageTest@4883b407]" name="VerifyLoginSuccessfulTest" duration-ms="10745" started-at="2020-06-09T15:05:29 IST" finished-at="2020-06-09T15:05:39 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyLoginSuccessfulTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.PegaTest.LoginPageTest@4883b407]" name="teardown" is-config="true" duration-ms="2068" started-at="2020-06-09T15:05:39 IST" finished-at="2020-06-09T15:05:42 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- Mccm.PegaTest.LoginPageTest -->
+    </test> <!-- Pega DSS Regression Test -->
+  </suite> <!-- Mccm Automation Regression Suite -->
+</testng-results>
