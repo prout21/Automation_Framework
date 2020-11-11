@@ -39,7 +39,7 @@ import io.restassured.response.Response;
  */
 public class NaveenRest {
 	
-
+HI GIT PUSH
            
    // String url = "http://mccm-191102761.eu-central-1.elb.amazonaws.com:8171/prweb/PRRestService/CSM/customerMarketingProductAPI/processNextBestAction";
 	  
